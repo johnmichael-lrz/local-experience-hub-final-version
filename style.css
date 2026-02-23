@@ -577,9 +577,9 @@ a:hover {
   display: none;
 }
 
-#tab-primary:checked ~ div #content-primary,
-#tab-secondary:checked ~ div #content-secondary {
-  display: block;
+#tab-primary:checked ~ #content-primary,
+#tab-secondary:checked ~ #content-secondary {
+  display: block !important;
 }
 
 #tab-primary:checked ~ div label[for="tab-primary"],
