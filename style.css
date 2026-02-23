@@ -577,10 +577,9 @@ a:hover {
   display: none;
 }
 
-/* CORRECTED SELECTORS HERE */
 #tab-primary:checked ~ #content-primary,
 #tab-secondary:checked ~ #content-secondary {
-  display: block;
+  display: block !important;
 }
 
 #tab-primary:checked ~ div label[for="tab-primary"],
@@ -1661,4 +1660,55 @@ a[href^="tel:"] {
 
 a[href^="tel:"]:hover {
   color: var(--color-gold);
+}
+
+/* ============================================================
+   PURE CSS SCROLL-SNAP CAROUSEL (For Category 4)
+   ============================================================ */
+.css-carousel {
+  width: 100%;
+  position: relative;
+}
+
+.css-carousel__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1.5rem; /* Space for scrollbar */
+}
+
+/* Hide scrollbar for cleaner look, but keep functionality */
+.css-carousel__track::-webkit-scrollbar {
+  height: 8px;
+}
+.css-carousel__track::-webkit-scrollbar-track {
+  background: rgba(10, 37, 64, 0.05);
+  border-radius: 10px;
+}
+.css-carousel__track::-webkit-scrollbar-thumb {
+  background: rgba(10, 37, 64, 0.2);
+  border-radius: 10px;
+}
+
+.css-carousel__slide {
+  flex: 0 0 100%;
+  height: 300px;
+  scroll-snap-align: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .css-carousel__slide {
+    flex: 0 0 calc(50% - 0.75rem); /* Show 2 slides on tablet */
+  }
+}
+
+@media (min-width: 992px) {
+  .css-carousel__slide {
+    flex: 0 0 calc(33.333% - 1rem); /* Show 3 slides on desktop */
+  }
 }
