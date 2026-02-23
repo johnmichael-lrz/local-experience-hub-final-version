@@ -577,8 +577,9 @@ a:hover {
   display: none;
 }
 
-#tab-primary:checked ~ div #content-primary,
-#tab-secondary:checked ~ div #content-secondary {
+/* CORRECTED SELECTORS HERE */
+#tab-primary:checked ~ #content-primary,
+#tab-secondary:checked ~ #content-secondary {
   display: block;
 }
 
