@@ -21,7 +21,6 @@
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -151,7 +150,7 @@
             <div class="text-center mb-4">
                 <h2 class="section-title">Fire Extinguisher Guide</h2>
                 <p class="section-subtitle">
-                    An interactive guide to fire extinguisher parts. Tap or click each area to learn how to use it properly.
+                    An interactive guide to fire extinguisher parts. Tap or click each quadrant to learn how to use it properly.
                 </p>
             </div>
 
@@ -160,20 +159,24 @@
                     <i class="bi bi-fire" style="color: var(--color-danger);"></i>
                     <h5 class="map-placeholder__title">Interactive Fire Extinguisher</h5>
                 </div>
-                <div class="map-placeholder__body">
-                    <div class="text-center p-4 w-100">
-                        <img src="fire-extinguisher.jpg" alt="Interactive Fire Extinguisher Guide" usemap="#firemap" class="img-fluid rounded border" style="max-height: 500px; object-fit: contain;">
+                <div class="map-placeholder__body py-4">
+                    <div class="text-center w-100">
+                        
+                        <img src="fire-extinguisher.jpg" alt="Interactive Fire Extinguisher Guide" usemap="#firemap" class="rounded border" style="width: 350px; height: 500px; object-fit: contain; margin: 0 auto; display: block; background: #fff;">
 
                         <map name="firemap">
-                            <area shape="rect" coords="40,10,260,80" alt="Handle and Levers" href="#popup-squeeze">
-                            <area shape="rect" coords="120,80,180,120" alt="Safety Pin" href="#popup-pull">
-                            <area shape="circle" coords="150,140,20" alt="Pressure Gauge" href="#popup-gauge">
-                            <area shape="rect" coords="10,100,60,400" alt="Hose and Nozzle" href="#popup-aim">
-                            <area shape="rect" coords="80,180,220,380" alt="Instruction Label" href="#popup-sweep">
+                            <area shape="rect" coords="0,0,175,166" alt="Handle" title="SQUEEZE" href="#popup-squeeze">
+                            <area shape="rect" coords="175,0,350,166" alt="Safety Pin" title="PULL" href="#popup-pull">
+                            
+                            <area shape="rect" coords="0,166,175,333" alt="Hose" title="AIM" href="#popup-aim">
+                            <area shape="rect" coords="175,166,350,333" alt="Pressure Gauge" title="GAUGE" href="#popup-gauge">
+                            
+                            <area shape="rect" coords="0,333,175,500" alt="Nozzle" title="NOZZLE" href="#popup-nozzle">
+                            <area shape="rect" coords="175,333,350,500" alt="Instruction Label" title="SWEEP" href="#popup-sweep">
                         </map>
                         
-                        <p class="mt-3 mb-0" style="color: var(--color-muted); font-family: 'Inter', sans-serif; font-size: 0.9rem;">
-                            <i class="bi bi-cursor-fill me-1"></i> Tap or click on the handle, pin, gauge, hose, and label to learn the P.A.S.S. method.
+                        <p class="mt-4 mb-0 px-3" style="color: var(--color-muted); font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+                            <i class="bi bi-cursor-fill me-1"></i> Tap anywhere on the 6 quadrants of the image to learn the P.A.S.S. method and parts.
                         </p>
                     </div>
                 </div>
@@ -184,7 +187,7 @@
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-hand-index-thumb" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">SQUEEZE</h3>
-                    <p class="lead" style="font-family: 'Inter', sans-serif;">Squeeze the handle to discharge the extinguishing agent.</p>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Squeeze the top handle to discharge the extinguishing agent.</p>
                     <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
@@ -194,17 +197,7 @@
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-unlock" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">PULL</h3>
-                    <p class="lead" style="font-family: 'Inter', sans-serif;">Pull the safety pin to break the tamper seal.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
-                </div>
-            </div>
-
-            <div id="popup-gauge" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
-                <div class="css-lightbox-content p-5 text-center text-white">
-                    <div class="mb-3"><i class="bi bi-speedometer2" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
-                    <h3 class="fw-bold mb-3" style="color: var(--color-gold);">GAUGE</h3>
-                    <p class="lead" style="font-family: 'Inter', sans-serif;">Check monthly. The needle should be in the green zone to ensure it's fully pressurized.</p>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Pull the safety pin to break the tamper seal and unlock the handle.</p>
                     <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
@@ -214,7 +207,27 @@
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-bullseye" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">AIM</h3>
-                    <p class="lead" style="font-family: 'Inter', sans-serif;">Aim the nozzle low, pointing exactly at the base of the fire, not at the flames.</p>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Grab the hose and aim it directly at the base of the fire.</p>
+                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                </div>
+            </div>
+
+            <div id="popup-gauge" class="css-lightbox">
+                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <div class="css-lightbox-content p-5 text-center text-white">
+                    <div class="mb-3"><i class="bi bi-speedometer2" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
+                    <h3 class="fw-bold mb-3" style="color: var(--color-gold);">GAUGE</h3>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Check the pressure gauge monthly. The needle must be in the green zone.</p>
+                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                </div>
+            </div>
+
+            <div id="popup-nozzle" class="css-lightbox">
+                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <div class="css-lightbox-content p-5 text-center text-white">
+                    <div class="mb-3"><i class="bi bi-droplet-fill" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
+                    <h3 class="fw-bold mb-3" style="color: var(--color-gold);">NOZZLE</h3>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Keep a safe distance. The extinguishing agent shoots out from this nozzle.</p>
                     <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
@@ -224,7 +237,7 @@
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-arrow-left-right" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">SWEEP</h3>
-                    <p class="lead" style="font-family: 'Inter', sans-serif;">Sweep from side to side at the base of the fire until it completely goes out.</p>
+                    <p class="lead" style="font-family: 'Inter', sans-serif;">Sweep from side to side at the base of the flames until the fire is out.</p>
                     <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
