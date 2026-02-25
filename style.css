@@ -51,6 +51,11 @@ a:hover {
   color: var(--color-gold);
 }
 
+/* Hide the hidden checkbox inputs used for pure CSS tabs/nav */
+.css-tab-input {
+  display: none !important;
+}
+
 .custom-navbar,
 .navbar {
   background-color: var(--color-navy) !important;
@@ -299,11 +304,11 @@ a:hover {
   font-family: 'Inter', sans-serif;
 }
 
+/* Replaced background with border-image to fulfill CSS3 Requirement */
 .hero-accent {
   width: 60px;
-  height: 4px;
-  background: var(--color-gold);
-  border-radius: 2px;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(to right, var(--color-gold), var(--color-white)) 1;
   margin: 1rem auto 0;
 }
 
