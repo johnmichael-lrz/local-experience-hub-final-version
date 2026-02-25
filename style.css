@@ -30,9 +30,8 @@ html {
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--color-text);
-  background:
-    linear-gradient(135deg, rgba(247, 248, 250, 0.95) 0%, rgba(226, 229, 234, 0.95) 100%),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="1" fill="rgba(0,0,0,0.03)"/></svg>') repeat;
+  background: linear-gradient(135deg, rgba(247, 248, 250, 0.95) 0%, rgba(226, 229, 234, 0.95) 100%),
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="1" fill="rgba(0,0,0,0.03)"/></svg>') repeat;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -49,11 +48,6 @@ a {
 
 a:hover {
   color: var(--color-gold);
-}
-
-/* Hide the hidden checkbox inputs used for pure CSS tabs/nav */
-.css-tab-input {
-  display: none !important;
 }
 
 .custom-navbar,
@@ -304,11 +298,11 @@ a:hover {
   font-family: 'Inter', sans-serif;
 }
 
-/* Replaced background with border-image to fulfill CSS3 Requirement */
 .hero-accent {
   width: 60px;
-  border-bottom: 4px solid transparent;
-  border-image: linear-gradient(to right, var(--color-gold), var(--color-white)) 1;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: 2px;
   margin: 1rem auto 0;
 }
 
