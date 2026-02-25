@@ -138,26 +138,34 @@
 
         <section id="first-aid-map" class="mb-5">
             <div class="text-center mb-4">
-                <h2 class="section-title">First Aid Kit Guide</h2>
+                <h2 class="section-title">Fire Extinguisher Guide</h2>
                 <p class="section-subtitle">
-                    An interactive guide to first aid essentials. Hover over each area to learn more.
+                    An interactive guide to understanding how fire extinguishers work. Hover over each area to learn more.
                 </p>
             </div>
 
             <div class="map-placeholder">
-                <div class="map-placeholder__header">
-                    <i class="bi bi-plus-circle" style="color: var(--color-danger);"></i>
-                    <h5 class="map-placeholder__title">Interactive First Aid Kit</h5>
-                </div>
-                <div class="map-placeholder__body">
-                    <div class="text-center p-5">
-                        <i class="bi bi-bandaid" style="font-size: 4rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        <p class="mt-3" style="color: var(--color-muted); font-family: 'Inter', sans-serif; font-size: 0.9rem;">
-                            Add your own first aid kit image here and configure the <code>&lt;map&gt;</code> areas.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div class="map-placeholder__header">
+        <i class="bi bi-fire" style="color: var(--color-danger);"></i>
+        <h5 class="map-placeholder__title">Interactive Fire Extinguisher</h5>
+    </div>
+    <div class="map-placeholder__body">
+        <div class="text-center p-4 w-100">
+            <img src="fire extinguisher.jpg" alt="Interactive Fire Extinguisher Guide" usemap="#firemap" class="img-fluid rounded border" style="max-height: 500px; object-fit: contain;">
+
+            <map name="firemap">
+                <area shape="rect" coords="150,0,300,100" alt="Handle and Levers" title="SQUEEZE: Squeeze the handle to discharge the extinguishing agent." href="#_">
+                <area shape="circle" coords="200,70,30" alt="Safety Pin" title="PULL: Pull the safety pin to break the tamper seal." href="#_">
+                <area shape="circle" coords="200,120,25" alt="Pressure Gauge" title="GAUGE: Check monthly. The needle should be in the green zone." href="#_">
+                <area shape="rect" coords="20,100,100,350" alt="Hose and Nozzle" title="AIM: Aim the nozzle at the base of the fire, not at the flames." href="#_">
+                <area shape="rect" coords="120,200,300,450" alt="Instruction Label" title="SWEEP: Sweep from side to side at the base of the fire until it goes out." href="#_">
+            </map>
+            
+            <p class="mt-3 mb-0" style="color: var(--color-muted); font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+                <i class="bi bi-cursor-fill me-1"></i> Hover your mouse over the handle, pin, gauge, hose, and label to learn the P.A.S.S. method.
+            </p>
+        </div>
+    </div>
         </section>
 
         <section id="evacuation" class="mb-5">
@@ -306,3 +314,4 @@
     </footer>
 </body>
 </html>
+
