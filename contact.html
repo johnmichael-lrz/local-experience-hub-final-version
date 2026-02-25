@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="style.css?v=final">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-shield-plus me-2"></i>LIFELINE MAKATI
             </a>
             
-            <input type="checkbox" id="nav-toggle" class="css-tab-input">
+            <input type="checkbox" id="nav-toggle" class="css-tab-input d-none" style="display: none !important; visibility: hidden; opacity: 0;">
             <label for="nav-toggle" class="navbar-toggler" style="cursor: pointer; border: 1px solid rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 0.25rem;">
                 <span class="navbar-toggler-icon"></span>
             </label>
@@ -33,7 +32,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="services.html">Emergency Directory</a></li>
-                            <li><a class="dropdown-item" href="services.html#first-aid-map">First Aid Guide</a></li>
+                            <li><a class="dropdown-item" href="services.html#first-aid-map">Fire Safety Guide</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="services.html#evacuation">Evacuation Centers</a></li>
                         </ul>
@@ -68,7 +67,7 @@
                     <h3 class="fw-bold mb-4">Send an Inquiry</h3>
                     <p class="text-muted mb-4" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Fill out the form below and our team will get back to you within 24 hours.</p>
                     
-                    <form action="#" method="get">
+                    <form action="#" method="post" enctype="multipart/form-data">
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
                                 <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
@@ -186,7 +185,7 @@
                             <div class="contact-info-card__icon"><i class="bi bi-envelope-fill"></i></div>
                             <div>
                                 <p class="contact-info-card__label">Email</p>
-                                <p class="contact-info-card__value">lifelineinquiries@gmail.com/p>
+                                <p class="contact-info-card__value">inquiries@lifelinemakati.local</p>
                             </div>
                         </div>
                         
@@ -215,8 +214,7 @@
                                     <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">DRRMO</strong>
                                 </div>
                                 <div class="text-end">
-                                    <a href="tel:029901800" class="emergency-link d-block">(02) 990-1800</a>
-                                    <a href="tel:028236590" class="emergency-link d-block">(02) 8236-590</a>
+                                    <a href="tel:+63288701191" class="emergency-link d-block">(02) 8870-1191</a>
                                 </div>
                             </li>
 
@@ -228,7 +226,8 @@
                                     <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Fire</strong>
                                 </div>
                                 <div class="text-end">
-                                    <a href="tel:0288162553" class="emergency-link d-block">(02) 8816-2553</a>
+                                    <a href="tel:+63288160791" class="emergency-link d-block">(02) 8816-0791</a>
+                                    <a href="tel:+6328887198" class="emergency-link d-block">(02) 8887-198</a>
                                 </div>
                             </li>
 
@@ -240,7 +239,7 @@
                                     <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Police</strong>
                                 </div>
                                 <div class="text-end">
-                                    <a href="tel:0288995765" class="emergency-link d-block">(02) 8899-5765</a>
+                                    <a href="tel:+63288995765" class="emergency-link d-block">(02) 8899-5765</a>
                                 </div>
                             </li>
 
@@ -292,7 +291,7 @@
                     <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
                     <ul class="list-unstyled footer-links">
                         <li><a href="services.html#hotlines" class="footer-link">Emergency Hotlines</a></li>
-                        <li><a href="services.html#first-aid-map" class="footer-link">First Aid Guide</a></li>
+                        <li><a href="services.html#first-aid-map" class="footer-link">Fire Safety Guide</a></li>
                         <li><a href="services.html#evacuation" class="footer-link">Evacuation Centers</a></li>
                         <li><a href="about.html#faqs" class="footer-link">FAQs</a></li>
                         <li><a href="contact.html" class="footer-link">Report a Hazard</a></li>
@@ -309,13 +308,14 @@
             </div>
             <hr class="footer-divider">
             <div class="text-center">
-                <small class="footer-copyright">
-                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub.
-                    All rights reserved. Academic project only.
+                <small class="footer-copyright d-block mb-1">
+                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.
+                </small>
+                <small class="footer-copyright" style="color: rgba(255, 255, 255, 0.35); font-size: 0.7rem;">
+                    <strong>Disclaimer:</strong> This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes. Not intended for commercial use.
                 </small>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
