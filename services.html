@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=glow">
+    <link rel="stylesheet" href="style.css?v=final">
     <style>
         .map-placeholder__body img {
             transition: transform 0.3s ease, box-shadow 0.3s ease !important;
@@ -41,7 +41,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="services.html">Emergency Directory</a></li>
-                            <li><a class="dropdown-item" href="services.html#first-aid-map">Fire Safety Guide</a></li>
+                            <li><a class="dropdown-item" href="services.html#fire-safety-map">Fire Safety Guide</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="services.html#evacuation">Evacuation Centers</a></li>
                         </ul>
@@ -100,7 +100,7 @@
                         <tr>
                             <td><i class="bi bi-fire me-2" style="color: #f59e0b;"></i>Fire &amp; Rescue</td>
                             <td>Makati City Bureau of Fire Protection</td>
-                            <td><a href="tel:+63288162553">(02) 8816-2553</a></td>
+                            <td><a href="tel:+63288160791">(02) 8816-0791</a></td>
                             <td>City-wide</td>
                             <td><span class="status-badge status-badge--active">Active 24/7</span></td>
                         </tr>
@@ -144,7 +144,7 @@
             </div>
         </section>
 
-        <section id="first-aid-map" class="mb-5">
+        <section id="fire-safety-map" class="mb-5">
             <div class="text-center mb-4">
                 <h2 class="section-title">Fire Extinguisher Guide</h2>
                 <p class="section-subtitle">
@@ -163,12 +163,12 @@
                         <img src="fire-extinguisher.jpg" alt="Interactive Fire Extinguisher Guide" usemap="#firemap" class="rounded border w-100 h-100" style="object-fit: contain; background: #fff; display: block;">
 
                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; z-index: 5;">
-                            <a href="#popup-squeeze" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
-                            <a href="#popup-pull" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
-                            <a href="#popup-aim" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
-                            <a href="#popup-gauge" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
-                            <a href="#popup-nozzle" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
-                            <a href="#popup-sweep" style="display: block; width: 100%; height: 100%; text-decoration: none;"></a>
+                            <a href="#popup-squeeze" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="SQUEEZE (Handle)"></a>
+                            <a href="#popup-pull" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="PULL (Pin)"></a>
+                            <a href="#popup-aim" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="AIM (Hose)"></a>
+                            <a href="#popup-gauge" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="GAUGE"></a>
+                            <a href="#popup-nozzle" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="NOZZLE"></a>
+                            <a href="#popup-sweep" style="display: block; width: 100%; height: 100%; text-decoration: none;" title="SWEEP (Label)"></a>
                         </div>
                     </div>
 
@@ -188,62 +188,62 @@
             </div>
 
             <div id="popup-squeeze" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-hand-index-thumb" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">SQUEEZE</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Squeeze the top handle to discharge the extinguishing agent.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
 
             <div id="popup-pull" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-unlock" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">PULL</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Pull the safety pin to break the tamper seal and unlock the handle.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
 
             <div id="popup-aim" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-bullseye" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">AIM</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Grab the hose and aim it directly at the base of the fire.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
 
             <div id="popup-gauge" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-speedometer2" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">GAUGE</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Check the pressure gauge monthly. The needle must be in the green zone.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
 
             <div id="popup-nozzle" class="css-lightbox">
-                <a href="#first-aid-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-droplet-fill" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">NOZZLE</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Keep a safe distance. The extinguishing agent shoots out from this nozzle.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
 
             <div id="popup-sweep" class="css-lightbox">
-                <a href="#fire-extinguisher-map" class="lightbox-close-bg"></a>
+                <a href="#fire-safety-map" class="lightbox-close-bg"></a>
                 <div class="css-lightbox-content p-5 text-center text-white">
                     <div class="mb-3"><i class="bi bi-arrow-left-right" style="font-size: 2.5rem; color: var(--color-gold);"></i></div>
                     <h3 class="fw-bold mb-3" style="color: var(--color-gold);">SWEEP</h3>
                     <p class="lead" style="font-family: 'Inter', sans-serif;">Sweep from side to side at the base of the flames until the fire is out.</p>
-                    <a href="#first-aid-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
+                    <a href="#fire-safety-map" class="btn btn-outline-light mt-3 rounded-pill px-4">Got it</a>
                 </div>
             </div>
         </section>
@@ -258,8 +258,8 @@
 
             <div class="evacuation__panel">
                 <div class="css-tabs">
-                    <input type="radio" name="evac-tabs" id="tab-primary" class="css-tab-input" style="display: none !important;" checked>
-                    <input type="radio" name="evac-tabs" id="tab-secondary" class="css-tab-input" style="display: none !important;">
+                    <input type="radio" name="evac-tabs" id="tab-primary" class="css-tab-input d-none" checked>
+                    <input type="radio" name="evac-tabs" id="tab-secondary" class="css-tab-input d-none">
 
                     <div class="d-flex" style="border-bottom: 1px solid var(--color-border);">
                         <label for="tab-primary" class="flex-fill text-center p-3 css-tab-label" style="cursor:pointer; font-weight:600; margin-bottom:0; color: var(--color-muted); transition: all 0.2s;"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Primary Sites</label>
@@ -368,7 +368,7 @@
                     <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
                     <ul class="list-unstyled footer-links">
                         <li><a href="services.html#hotlines" class="footer-link">Emergency Hotlines</a></li>
-                        <li><a href="services.html#first-aid-map" class="footer-link">Fire Safety Guide</a></li>
+                        <li><a href="services.html#fire-safety-map" class="footer-link">Fire Safety Guide</a></li>
                         <li><a href="services.html#evacuation" class="footer-link">Evacuation Centers</a></li>
                         <li><a href="about.html#faqs" class="footer-link">FAQs</a></li>
                         <li><a href="contact.html" class="footer-link">Report a Hazard</a></li>
@@ -385,13 +385,14 @@
             </div>
             <hr class="footer-divider">
             <div class="text-center">
-                <small class="footer-copyright">
-                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub.
-                    All rights reserved. Academic project only.
+                <small class="footer-copyright d-block mb-1">
+                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.
+                </small>
+                <small class="footer-copyright" style="color: rgba(255, 255, 255, 0.35); font-size: 0.7rem;">
+                    <strong>Disclaimer:</strong> This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes. Not intended for commercial use.
                 </small>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
