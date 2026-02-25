@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=final">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
                 <i class="bi bi-shield-plus me-2"></i>LIFELINE MAKATI
             </a>
             
-            <input type="checkbox" id="nav-toggle" class="d-none">
+            <input type="checkbox" id="nav-toggle" class="css-tab-input">
             <label for="nav-toggle" class="navbar-toggler" style="cursor: pointer; border: 1px solid rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 0.25rem;">
                 <span class="navbar-toggler-icon"></span>
             </label>
@@ -42,10 +42,10 @@
                         <a class="nav-link" href="providers.html">Service Providers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About & FAQs</a>
+                        <a class="nav-link" href="about.html">About &amp; FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact & Inquiry</a>
+                        <a class="nav-link active" href="contact.html">Contact &amp; Inquiry</a>
                     </li>
                 </ul>
             </div>
@@ -54,128 +54,106 @@
 
     <header class="page-hero">
         <div class="container">
-            <h1 class="display-5 fw-bold">Contact & Inquiry</h1>
-            <p class="lead mt-2">
-                Report a hazard, ask a question, or send feedback to the LIFELINE Makati team.
-            </p>
+            <h1 class="display-5 fw-bold">Contact &amp; Inquiry</h1>
+            <p class="lead mt-2">Get in touch with LIFELINE Makati for non-emergency inquiries or report a local hazard.</p>
             <div class="hero-accent" aria-hidden="true"></div>
         </div>
     </header>
 
     <main class="container my-5">
         <div class="row g-5">
+            
             <div class="col-lg-7">
-                <div class="form-card p-4 p-md-5">
-                    <h2 class="section-title mb-1">Send an Inquiry</h2>
-                    <p class="section-subtitle mb-4">
-                        Fill out the form below and our team will get back to you within 24 hours.
-                    </p>
-
-                    <form id="inquiryForm" action="#" method="post">
+                <div class="form-card">
+                    <h3 class="fw-bold mb-4">Send an Inquiry</h3>
+                    <p class="text-muted mb-4" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Fill out the form below and our team will get back to you within 24 hours.</p>
+                    
+                    <form action="#" method="get">
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
                                 <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control custom-input" id="firstName" name="firstName" placeholder="e.g., Juan" required>
+                                <input type="text" class="form-control custom-input" id="firstName" placeholder="e.g., Juan" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control custom-input" id="lastName" name="lastName" placeholder="e.g., Santos" required>
+                                <input type="text" class="form-control custom-input" id="lastName" placeholder="e.g., Dela Cruz" required>
                             </div>
                         </div>
 
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control custom-input" id="email" name="email" placeholder="you@example.com" required>
+                                <input type="email" class="form-control custom-input" id="email" placeholder="juan@example.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control custom-input" id="phone" name="phone" placeholder="09XX-XXX-XXXX">
+                                <input type="tel" class="form-control custom-input" id="phone" placeholder="0912-345-6789">
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="inquiryType" class="form-label">Inquiry Type <span class="text-danger">*</span></label>
-                            <select class="form-select custom-select" id="inquiryType" name="inquiryType" required>
-                                <option value="" disabled selected>-- Select an option --</option>
+                            <select class="form-select custom-select" id="inquiryType" required>
+                                <option value="" selected disabled>-- Select an option --</option>
                                 <option value="hazard">Report a Hazard</option>
-                                <option value="emergency">Emergency Assistance</option>
-                                <option value="volunteer">Volunteer Registration</option>
-                                <option value="feedback">General Feedback</option>
-                                <option value="question">General Question</option>
+                                <option value="volunteer">Volunteer Application</option>
+                                <option value="general">General Information</option>
+                                <option value="feedback">Feedback / Suggestion</option>
                             </select>
                         </div>
 
                         <div class="mb-3">
                             <label for="barangay" class="form-label">Barangay</label>
-                            <select class="form-select custom-select" id="barangay" name="barangay">
-                                <option value="" disabled selected>-- Select your barangay --</option>
+                            <select class="form-select custom-select" id="barangay">
+                                <option value="" selected disabled>-- Select your barangay --</option>
                                 <option value="poblacion">Poblacion</option>
-                                <option value="san-antonio">San Antonio</option>
-                                <option value="bel-air">Bel-Air</option>
-                                <option value="guadalupe-nuevo">Guadalupe Nuevo</option>
-                                <option value="guadalupe-viejo">Guadalupe Viejo</option>
-                                <option value="pembo">Pembo</option>
-                                <option value="comembo">Comembo</option>
-                                <option value="west-rembo">West Rembo</option>
-                                <option value="east-rembo">East Rembo</option>
-                                <option value="pio-del-pilar">Pio del Pilar</option>
-                                <option value="palanan">Palanan</option>
-                                <option value="bangkal">Bangkal</option>
-                                <option value="tejeros">Tejeros</option>
-                                <option value="la-paz">La Paz</option>
+                                <option value="valero">Valero</option>
+                                <option value="san_lorenzo">San Lorenzo</option>
+                                <option value="bel_air">Bel-Air</option>
                                 <option value="other">Other / Not Listed</option>
                             </select>
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Urgency Level</label>
-                            <div class="d-flex flex-wrap gap-3">
-                                <div class="form-check">
-                                    <input class="form-check-input custom-radio" type="radio" name="urgency" id="urgencyLow" value="low">
-                                    <label class="form-check-label" for="urgencyLow">Low</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input custom-radio" type="radio" name="urgency" id="urgencyMedium" value="medium" checked>
-                                    <label class="form-check-label" for="urgencyMedium">Medium</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input custom-radio" type="radio" name="urgency" id="urgencyHigh" value="high">
-                                    <label class="form-check-label" for="urgencyHigh">High</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input custom-radio" type="radio" name="urgency" id="urgencyCritical" value="critical">
-                                    <label class="form-check-label" for="urgencyCritical">Critical</label>
-                                </div>
+                        <div class="mb-4">
+                            <label class="form-label d-block">Urgency Level</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input custom-radio" type="radio" name="urgencyOptions" id="urgencyLow" value="low" checked>
+                                <label class="form-check-label" style="font-family: 'Inter', sans-serif; font-size: 0.85rem;" for="urgencyLow">Low</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input custom-radio" type="radio" name="urgencyOptions" id="urgencyMed" value="medium">
+                                <label class="form-check-label" style="font-family: 'Inter', sans-serif; font-size: 0.85rem;" for="urgencyMed">Medium</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input custom-radio" type="radio" name="urgencyOptions" id="urgencyHigh" value="high">
+                                <label class="form-check-label" style="font-family: 'Inter', sans-serif; font-size: 0.85rem;" for="urgencyHigh">High</label>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                            <textarea class="form-control custom-input" id="message" name="message" rows="5" placeholder="Describe your inquiry, the hazard location, or your feedback..." required></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="attachment" class="form-label">Attach Photo (optional)</label>
-                            <input class="form-control custom-input" type="file" id="attachment" name="attachment" accept="image/*">
-                            <div class="form-text">Upload a photo of the hazard or situation (JPG, PNG, max 5MB).</div>
+                            <textarea class="form-control custom-input" id="message" rows="5" placeholder="Describe the hazard, inquiry, or feedback in detail..." required></textarea>
                         </div>
 
                         <div class="mb-4">
-                            <div class="form-check">
-                                <input class="form-check-input custom-checkbox" type="checkbox" id="agreement" name="agreement" required>
-                                <label class="form-check-label" for="agreement">
-                                    I confirm that the information provided is accurate and truthful. <span class="text-danger">*</span>
-                                </label>
-                            </div>
+                            <label for="fileUpload" class="form-label">Attach Photo (optional)</label>
+                            <input class="form-control custom-input" type="file" id="fileUpload" accept="image/png, image/jpeg">
+                            <div class="form-text mt-2" style="font-size: 0.75rem;">Upload a photo of the hazard or situation (JPG, PNG, max 5MB).</div>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input custom-checkbox" type="checkbox" value="" id="confirmCheck" required>
+                            <label class="form-check-label" for="confirmCheck" style="font-family: 'Inter', sans-serif; font-size: 0.85rem;">
+                                I confirm that the information provided is accurate and truthful. <span class="text-danger">*</span>
+                            </label>
                         </div>
 
                         <div class="d-flex gap-3">
-                            <button type="submit" class="btn btn-primary btn-lg shadow-btn px-5">
-                                <i class="bi bi-send-fill me-2"></i>Submit
+                            <button type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center px-4 py-2">
+                                <i class="bi bi-send-fill me-2"></i> Submit
                             </button>
-                            <button type="reset" class="btn btn-outline-secondary btn-lg px-4">
-                                <i class="bi bi-arrow-counterclockwise me-2"></i>Reset
+                            <button type="reset" class="btn btn-outline-secondary px-4 py-2" style="border-radius: 50px; font-weight: 600; font-family: 'Inter', sans-serif;">
+                                <i class="bi bi-arrow-counterclockwise me-2"></i> Reset
                             </button>
                         </div>
                     </form>
@@ -183,132 +161,119 @@
             </div>
 
             <div class="col-lg-5">
-                <div class="contact-info-card p-4 mb-4">
-                    <h4 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Contact Information</h4>
-
-                    <div class="contact-item mb-3">
-                        <div class="contact-item-icon">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <div>
-                            <strong>Address</strong>
-                            <p class="mb-0" style="color: rgba(255,255,255,0.7);">Makati City Hall, J.P. Rizal St.,<br>Poblacion, Makati City 1210</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item mb-3">
-                        <div class="contact-item-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <div>
-                            <strong>Phone</strong>
-                            <p class="mb-0" style="color: rgba(255,255,255,0.7);">(02) 990-1800 / (02) 8236-590</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item mb-3">
-                        <div class="contact-item-icon">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-                        <div>
-                            <strong>Email</strong>
-                            <p class="mb-0" style="color: rgba(255,255,255,0.7);">makatidrrmo@makati.gov.ph</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-item-icon">
-                            <i class="bi bi-clock-fill"></i>
-                        </div>
-                        <div>
-                            <strong>Office Hours</strong>
-                            <p class="mb-0" style="color: rgba(255,255,255,0.7);">Mon–Fri: 8:00 AM – 5:00 PM<br>Emergency Line: 24/7</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="map-card p-4">
-                    <h4 class="fw-bold mb-3"><i class="bi bi-pin-map-fill me-2"></i>Our Location</h4>
-                    <div class="map-placeholder" style="border: none;">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5!2d121.0195!3d14.5547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90264a0ed01%3A0x2b066ed57830cace!2sMakati%20City%20Hall!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
-                            width="100%"
-                            height="300"
-                            style="border:0; border-radius: 12px;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Makati City Hall Location">
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="quick-numbers-card p-4 mt-4">
-                    <h4 class="fw-bold mb-4 pb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);"><i class="bi bi-telephone-outbound-fill me-2" style="color: var(--color-gold);"></i>Emergency Numbers</h4>
+                <div class="d-flex flex-column gap-4">
                     
-                    <ul class="list-unstyled mb-0 quick-numbers-list">
-                        <li class="d-flex justify-content-between align-items-center mb-2 p-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="quick-icon text-danger bg-danger bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                    <i class="bi bi-exclamation-triangle-fill"></i>
-                                </div>
-                                <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">DRRMO</strong>
+                    <div class="contact-info-card">
+                        <h4 class="contact-info-card__title">Contact Information</h4>
+                        
+                        <div class="contact-info-card__item">
+                            <div class="contact-info-card__icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <p class="contact-info-card__label">Address</p>
+                                <p class="contact-info-card__value">Makati City Hall, J.P. Rizal St.,<br>Poblacion, Makati City, 1200</p>
                             </div>
-                            <div class="text-end">
-                                <a href="tel:029901800" class="emergency-link d-block">(02) 990-1800</a>
-                                <a href="tel:028236590" class="emergency-link d-block">(02) 8236-590</a>
+                        </div>
+                        
+                        <div class="contact-info-card__item">
+                            <div class="contact-info-card__icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <p class="contact-info-card__label">Phone</p>
+                                <p class="contact-info-card__value">(02) 8870-1000 / (02) 8899-8938</p>
                             </div>
-                        </li>
+                        </div>
+                        
+                        <div class="contact-info-card__item">
+                            <div class="contact-info-card__icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <p class="contact-info-card__label">Email</p>
+                                <p class="contact-info-card__value">makaticonnect@makati.gov.ph</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-card__item mb-0">
+                            <div class="contact-info-card__icon"><i class="bi bi-clock-fill"></i></div>
+                            <div>
+                                <p class="contact-info-card__label">Office Hours</p>
+                                <p class="contact-info-card__value">Mon-Fri: 8:00 AM - 5:00 PM<br><span class="text-warning">Emergency Line: 24/7</span></p>
+                            </div>
+                        </div>
+                    </div>
 
-                        <li class="d-flex justify-content-between align-items-center mb-2 p-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="quick-icon text-warning bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                    <i class="bi bi-fire"></i>
-                                </div>
-                                <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Fire</strong>
-                            </div>
-                            <div class="text-end">
-                                <a href="tel:0288162553" class="emergency-link d-block">(02) 8816-2553</a>
-                            </div>
-                        </li>
+                    <div class="map-card p-2 rounded border">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.737152018868!2d121.0215!3d14.5566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c908ecb886cd%3A0xc368d4a9ba14fb1e!2sMakati%20City%20Hall!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
 
-                        <li class="d-flex justify-content-between align-items-center mb-2 p-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="quick-icon text-info bg-info bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                    <i class="bi bi-shield-check"></i>
+                    <div class="quick-numbers-card p-4">
+                        <h4 class="fw-bold mb-4 pb-3" style="border-bottom: 1px solid rgba(255,255,255,0.1);"><i class="bi bi-telephone-outbound-fill me-2" style="color: var(--color-gold);"></i>Emergency Numbers</h4>
+                        
+                        <ul class="list-unstyled mb-0 quick-numbers-list">
+                            <li class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="quick-icon text-danger bg-danger bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                    </div>
+                                    <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">DRRMO</strong>
                                 </div>
-                                <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Police</strong>
-                            </div>
-                            <div class="text-end">
-                                <a href="tel:0288995765" class="emergency-link d-block">(02) 8899-5765</a>
-                            </div>
-                        </li>
+                                <div class="text-end">
+                                    <a href="tel:029901800" class="emergency-link d-block">(02) 990-1800</a>
+                                    <a href="tel:028236590" class="emergency-link d-block">(02) 8236-590</a>
+                                </div>
+                            </li>
 
-                        <li class="d-flex justify-content-between align-items-center mb-2 p-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="quick-icon text-danger bg-danger bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                    <i class="bi bi-heart-pulse-fill"></i>
+                            <li class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="quick-icon text-warning bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                        <i class="bi bi-fire"></i>
+                                    </div>
+                                    <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Fire</strong>
                                 </div>
-                                <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Red Cross</strong>
-                            </div>
-                            <div class="text-end">
-                                <a href="tel:143" class="emergency-link d-block" style="font-size: 1.15rem; letter-spacing: 1px;">143</a>
-                            </div>
-                        </li>
+                                <div class="text-end">
+                                    <a href="tel:0288162553" class="emergency-link d-block">(02) 8816-2553</a>
+                                </div>
+                            </li>
 
-                        <li class="d-flex justify-content-between align-items-center p-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="quick-icon text-success bg-success bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
-                                    <i class="bi bi-telephone-fill"></i>
+                            <li class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="quick-icon text-info bg-info bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Police</strong>
                                 </div>
-                                <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">National</strong>
-                            </div>
-                            <div class="text-end">
-                                <a href="tel:911" class="emergency-link d-block" style="font-size: 1.15rem; letter-spacing: 1px;">911</a>
-                            </div>
-                        </li>
-                    </ul>
+                                <div class="text-end">
+                                    <a href="tel:0288995765" class="emergency-link d-block">(02) 8899-5765</a>
+                                </div>
+                            </li>
+
+                            <li class="d-flex justify-content-between align-items-center mb-2 p-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="quick-icon text-danger bg-danger bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                        <i class="bi bi-heart-pulse-fill"></i>
+                                    </div>
+                                    <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">Red Cross</strong>
+                                </div>
+                                <div class="text-end">
+                                    <a href="tel:143" class="emergency-link d-block" style="font-size: 1.15rem; letter-spacing: 1px;">143</a>
+                                </div>
+                            </li>
+
+                            <li class="d-flex justify-content-between align-items-center p-2">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="quick-icon text-success bg-success bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+                                        <i class="bi bi-telephone-fill"></i>
+                                    </div>
+                                    <strong class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.95rem;">National</strong>
+                                </div>
+                                <div class="text-end">
+                                    <a href="tel:911" class="emergency-link d-block" style="font-size: 1.15rem; letter-spacing: 1px;">911</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+
+        </div> 
+    </main>
 
     <footer class="custom-footer">
         <div class="container">
@@ -319,8 +284,8 @@
                         <li><a href="index.html" class="footer-link">Home</a></li>
                         <li><a href="services.html" class="footer-link">Services Directory</a></li>
                         <li><a href="providers.html" class="footer-link">Service Providers</a></li>
-                        <li><a href="about.html" class="footer-link">About & FAQs</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact & Inquiry</a></li>
+                        <li><a href="about.html" class="footer-link">About &amp; FAQs</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact &amp; Inquiry</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -339,21 +304,17 @@
                     <p class="mb-1">Developer: John Michael Elaurza</p>
                     <p class="mb-1">ITS121L - Web Systems and Technologies 1 Laboratory</p>
                     <p class="mb-1">Section: BSCS BM14</p>
-                    <p class="mb-0">School Year: 2025–2026</p>
+                    <p class="mb-0">School Year: 2025&ndash;2026</p>
                 </div>
             </div>
             <hr class="footer-divider">
             <div class="text-center">
                 <small class="footer-copyright">
-                    © 2026 LIFELINE Makati — A Community Emergency Services Hub.
+                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub.
                     All rights reserved. Academic project only.
                 </small>
             </div>
         </div>
     </footer>
-
 </body>
-
 </html>
-
-
