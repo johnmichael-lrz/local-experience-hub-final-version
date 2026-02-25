@@ -7,17 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=final">
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-shield-plus me-2"></i>LIFELINE MAKATI
             </a>
             
-            <input type="checkbox" id="nav-toggle" class="d-none">
+            <input type="checkbox" id="nav-toggle" class="css-tab-input d-none" style="display: none !important; visibility: hidden; opacity: 0;">
             <label for="nav-toggle" class="navbar-toggler" style="cursor: pointer; border: 1px solid rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 0.25rem;">
                 <span class="navbar-toggler-icon"></span>
             </label>
@@ -33,7 +32,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="services.html">Emergency Directory</a></li>
-                            <li><a class="dropdown-item" href="services.html#first-aid-map">First Aid Guide</a></li>
+                            <li><a class="dropdown-item" href="services.html#first-aid-map">Fire Safety Guide</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="services.html#evacuation">Evacuation Centers</a></li>
                         </ul>
@@ -56,279 +55,134 @@
         <div class="container">
             <h1 class="display-5 fw-bold">Service Providers</h1>
             <p class="lead mt-2">
-                Meet the dedicated volunteers and professionals who keep our community safe.
+                Meet the dedicated professionals keeping the community safe.
             </p>
             <div class="hero-accent" aria-hidden="true"></div>
         </div>
     </header>
 
-    <main class="container my-5">
+    <main class="container my-5" id="gallery-section">
 
-        <section id="categories" class="mb-5">
-            <div class="text-center mb-4">
-                <h2 class="section-title">Provider Categories</h2>
-                <p class="section-subtitle">
-                    Our network includes six key categories of emergency service providers.
-                </p>
-            </div>
+        <div class="text-center mb-5">
+            <h2 class="section-title">First Responders Gallery</h2>
+            <p class="section-subtitle">Click on any profile to learn more about their roles and responsibilities.</p>
+        </div>
 
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-medical-bg">
-                            <i class="bi bi-heart-pulse-fill"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Paramedics &amp; EMTs</h5>
-                        <p>Trained emergency medical technicians providing on-site first response and ambulance services.</p>
-                        <ul class="category-skills">
-                            <li>CPR &amp; AED operation</li>
-                            <li>Wound management</li>
-                            <li>Patient transport</li>
-                        </ul>
-                    </div>
+        <div class="gallery__grid">
+            
+            <a href="#lb-paramedic" class="gallery__card text-decoration-none">
+                <img src="paramedic.jpg" class="gallery__card-image" alt="Emergency Paramedic">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Emergency Paramedic</h5>
+                    <p class="gallery__card-description">Medical Support &amp; Transport</p>
                 </div>
+            </a>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-fire-bg">
-                            <i class="bi bi-fire"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Firefighters</h5>
-                        <p>Frontline fire suppression teams equipped with modern rescue tools and apparatus.</p>
-                        <ul class="category-skills">
-                            <li>Fire suppression</li>
-                            <li>Structural rescue</li>
-                            <li>Hazmat response</li>
-                        </ul>
-                    </div>
+            <a href="#lb-firefighter" class="gallery__card text-decoration-none">
+                <img src="firefighter.jpg" class="gallery__card-image" alt="Firefighter">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Firefighter</h5>
+                    <p class="gallery__card-description">Fire Rescue &amp; Hazard Control</p>
                 </div>
+            </a>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-police-bg">
-                            <i class="bi bi-shield-shaded"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Law Enforcement</h5>
-                        <p>Police officers maintaining peace and order, especially during emergency operations.</p>
-                        <ul class="category-skills">
-                            <li>Crowd management</li>
-                            <li>Traffic control</li>
-                            <li>Security perimeter</li>
-                        </ul>
-                    </div>
+            <a href="#lb-police" class="gallery__card text-decoration-none">
+                <img src="police-officer.jpg" class="gallery__card-image" alt="Police Officer">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Police Officer</h5>
+                    <p class="gallery__card-description">Law Enforcement &amp; Public Safety</p>
                 </div>
+            </a>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-abuse-bg">
-                            <i class="bi bi-people-fill"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Social Workers</h5>
-                        <p>Professionals providing psychosocial support, shelter coordination, and family assistance.</p>
-                        <ul class="category-skills">
-                            <li>Crisis counseling</li>
-                            <li>Evacuation assistance</li>
-                            <li>Relief distribution</li>
-                        </ul>
-                    </div>
+            <a href="#lb-nurse" class="gallery__card text-decoration-none">
+                <img src="community-nurse.png" class="gallery__card-image" alt="Community Nurse">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Community Nurse</h5>
+                    <p class="gallery__card-description">Public Health &amp; Triage Care</p>
                 </div>
+            </a>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-disaster-bg">
-                            <i class="bi bi-cone-striped"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Disaster Response Volunteers</h5>
-                        <p>Community volunteers trained in search, rescue, and relief operations after disasters.</p>
-                        <ul class="category-skills">
-                            <li>Search &amp; rescue</li>
-                            <li>Debris clearing</li>
-                            <li>Supply logistics</li>
-                        </ul>
-                    </div>
+            <a href="#lb-social" class="gallery__card text-decoration-none">
+                <img src="social-worker.jpg" class="gallery__card-image" alt="Social Worker">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Social Worker</h5>
+                    <p class="gallery__card-description">Crisis Intervention &amp; Welfare</p>
                 </div>
+            </a>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="category-card p-4 h-100">
-                        <div class="category-icon icon-coastguard-bg">
-                            <i class="bi bi-hospital"></i>
-                        </div>
-                        <h5 class="fw-bold mt-3">Community Health Workers</h5>
-                        <p>Nurses and health workers providing primary care, immunization, and health education.</p>
-                        <ul class="category-skills">
-                            <li>Basic health screening</li>
-                            <li>Immunization drives</li>
-                            <li>Health education</li>
-                        </ul>
-                    </div>
+            <a href="#lb-volunteer" class="gallery__card text-decoration-none">
+                <img src="disaster-relief-volunteer.png" class="gallery__card-image" alt="Disaster Relief Volunteer">
+                <div class="gallery__card-overlay">
+                    <h5 class="gallery__card-title">Relief Volunteer</h5>
+                    <p class="gallery__card-description">Evacuation &amp; Logistics Support</p>
                 </div>
-            </div>
-        </section>
+            </a>
 
-        <section id="gallery" class="mb-5">
-            <div class="text-center mb-4">
-                <h2 class="section-title">Provider Gallery</h2>
-                <p class="section-subtitle">
-                    Click any image to view it in full. Hover to see the provider's specialty.
-                </p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-marco" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-heart-pulse" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Marco D.</h5>
-                            <p>Volunteer Paramedic</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-ana" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-fire" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Ana R.</h5>
-                            <p>Firefighter</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-carlo" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-shield-shaded" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Carlo M.</h5>
-                            <p>Police Officer</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-maria" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-people" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Maria L.</h5>
-                            <p>Social Worker</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-jose" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-cone-striped" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Jose P.</h5>
-                            <p>Disaster Volunteer</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <a href="#lightbox-elena" class="gallery-item d-block text-decoration-none">
-                        <div style="height: 280px; background: var(--color-offwhite); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-hospital" style="font-size: 3rem; color: var(--color-muted); opacity: 0.3;"></i>
-                        </div>
-                        <div class="gallery-overlay" style="opacity: 1;">
-                            <h5>Elena S.</h5>
-                            <p>Community Nurse</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+        </div>
 
     </main>
 
-    <div id="lightbox-marco" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Marco D.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Volunteer Paramedic</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-heart-pulse" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Over 8 years of emergency medical response experience serving Makati communities.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-paramedic" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="paramedic.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Emergency Paramedic" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Emergency Paramedic</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Paramedics provide advanced life support and immediate pre-hospital care to patients experiencing critical medical emergencies before transporting them to Ospital ng Makati.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <div id="lightbox-ana" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Ana R.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Firefighter</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-fire" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Dedicated firefighter specializing in structural rescue and fire prevention education.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-firefighter" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="firefighter.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Firefighter" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Makati Firefighter</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Highly trained professionals responding to fire outbreaks, structural collapses, and hazardous material spills to protect lives and property.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <div id="lightbox-carlo" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Carlo M.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Police Officer</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-shield-shaded" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Community police officer focused on neighborhood safety and disaster coordination.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-police" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="police-officer.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Police Officer" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Police Officer</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Ensuring public safety, maintaining community order, and responding to crime or civil disturbances within the city's jurisdiction.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <div id="lightbox-maria" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Maria L.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Social Worker</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-people" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Licensed social worker providing crisis counseling and evacuation support services.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-nurse" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="community-nurse.png" class="img-fluid rounded mb-3 shadow-sm" alt="Community Nurse" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Community Nurse</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Assigned to barangay health centers to provide primary care, health education, and immediate triage during localized disasters.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <div id="lightbox-jose" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Jose P.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Disaster Volunteer</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-cone-striped" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Trained in search and rescue with 5 years of volunteer service during typhoon relief.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-social" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="social-worker.jpg" class="img-fluid rounded mb-3 shadow-sm" alt="Social Worker" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Social Worker</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Providing essential crisis intervention, emotional support, and resource distribution to vulnerable individuals affected by emergencies.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <div id="lightbox-elena" class="css-lightbox">
-        <a href="#_" class="lightbox-close-bg"></a>
-        <div class="css-lightbox-content text-center p-4">
-            <h5 class="fw-bold text-white mb-2">Elena S.</h5>
-            <p class="text-white-50 mb-3" style="font-family: 'Inter', sans-serif;">Community Nurse</p>
-            <div style="min-height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 1.5rem;">
-                <i class="bi bi-hospital" style="font-size: 5rem; color: rgba(255,255,255,0.2);"></i>
-            </div>
-            <p class="text-white" style="font-family: 'Inter', sans-serif; font-size: 0.9rem;">Registered nurse conducting barangay health screenings and immunization programs.</p>
-            <a href="#_" class="btn btn-outline-light mt-3">Close</a>
+    <div id="lb-volunteer" class="css-lightbox">
+        <a href="#gallery-section" class="lightbox-close-bg"></a>
+        <div class="css-lightbox-content p-4 text-center">
+            <img src="disaster-relief-volunteer.png" class="img-fluid rounded mb-3 shadow-sm" alt="Disaster Relief Volunteer" style="max-height: 250px; width: 100%; object-fit: cover;">
+            <h4 class="text-white fw-bold">Relief Volunteer</h4>
+            <p class="text-white-50" style="font-family: 'Inter', sans-serif;">Community members trained by the DRRMO to assist with evacuation procedures, crowd control, and the distribution of relief goods.</p>
+            <a href="#gallery-section" class="btn btn-outline-light mt-2 rounded-pill px-4 fw-bold">Close Profile</a>
         </div>
     </div>
 
-    <footer class="custom-footer">
+    <footer class="custom-footer mt-auto">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -345,7 +199,7 @@
                     <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
                     <ul class="list-unstyled footer-links">
                         <li><a href="services.html#hotlines" class="footer-link">Emergency Hotlines</a></li>
-                        <li><a href="services.html#first-aid-map" class="footer-link">First Aid Guide</a></li>
+                        <li><a href="services.html#first-aid-map" class="footer-link">Fire Safety Guide</a></li>
                         <li><a href="services.html#evacuation" class="footer-link">Evacuation Centers</a></li>
                         <li><a href="about.html#faqs" class="footer-link">FAQs</a></li>
                         <li><a href="contact.html" class="footer-link">Report a Hazard</a></li>
@@ -362,15 +216,14 @@
             </div>
             <hr class="footer-divider">
             <div class="text-center">
-                <small class="footer-copyright">
-                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub.
-                    All rights reserved. Academic project only.
+                <small class="footer-copyright d-block mb-1">
+                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.
+                </small>
+                <small class="footer-copyright" style="color: rgba(255, 255, 255, 0.35); font-size: 0.7rem;">
+                    <strong>Disclaimer:</strong> This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes. Not intended for commercial use.
                 </small>
             </div>
         </div>
     </footer>
-
 </body>
-
 </html>
-
