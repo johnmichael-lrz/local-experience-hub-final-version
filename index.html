@@ -7,30 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=glow">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+<body class="bg-light">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-shield-plus me-2"></i>LIFELINE MAKATI
+                <i class="bi bi-shield-plus text-danger me-2"></i>LIFELINE MAKATI
             </a>
-
-            <input type="checkbox" id="nav-toggle" class="css-tab-input d-none" style="display: none !important; visibility: hidden; opacity: 0;">
-            <label for="nav-toggle" class="navbar-toggler" style="cursor: pointer; border: 1px solid rgba(255,255,255,0.25); padding: 0.25rem 0.75rem; border-radius: 0.25rem;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </label>
-
-            <div class="nav-menu" id="navbarNav">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item dropdown custom-dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="servicesDropdown">
                             <li><a class="dropdown-item" href="services.html">Emergency Directory</a></li>
                             <li><a class="dropdown-item" href="services.html#first-aid-map">Fire Safety Guide</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -51,112 +49,104 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero__content">
-            <div class="hero__badge">Disaster Risk Reduction &amp; Management</div>
-            <h1 class="hero__title">Your <span>Lifeline</span> in Times of Crisis</h1>
-            <p class="hero__subtitle">LIFELINE Makati is the centralized community emergency services directory for Makati City. Connecting residents with rapid medical, fire, police, and disaster response resources when every second counts.</p>
+    <header class="bg-primary text-white text-center py-5 shadow-sm" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+        <div class="container py-5">
+            <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill">Disaster Risk Reduction &amp; Management</span>
+            <h1 class="display-4 fw-bold font-playfair mb-3">Your <span class="text-warning">Lifeline</span> in Times of Crisis</h1>
+            <p class="lead mb-4 mx-auto" style="max-width: 700px;">LIFELINE Makati is the centralized community emergency services directory for Makati City. Connecting residents with rapid medical, fire, police, and disaster response resources when every second counts.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="services.html" class="hero__btn">View Emergency Services</a>
-                <a href="contact.html" class="btn btn-outline-light" style="font-weight: 700; font-size: 0.9rem; padding: 0.7rem 2rem; border-radius: 50px;">Report a Hazard</a>
+                <a href="services.html" class="btn btn-warning btn-lg fw-bold rounded-pill px-4">View Emergency Services</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg fw-bold rounded-pill px-4">Report a Hazard</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section class="slider-section" style="background: var(--color-offwhite); padding: 3.5rem 0;">
+    <section class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-4">
-                <h3 class="fw-bold" style="color: var(--color-navy); font-family: 'Playfair Display', serif;">Makati Emergency Response in Action</h3>
-                <p style="color: var(--color-muted); font-family: 'Inter', sans-serif;">Swipe or scroll to view our community efforts.</p>
+                <h2 class="fw-bold font-playfair">Makati Emergency Response in Action</h2>
+                <p class="text-muted">Swipe to view our community efforts.</p>
             </div>
             
-            <div class="css-slider-wrapper">
-                <div class="css-slider-track">
-                    <div class="css-slider-slide">
-                        <div style="background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light)); height: 100%; display: flex; align-items: center; justify-content: center; color: white; border-radius: 12px; position: relative; overflow: hidden;">
-                            <i class="bi bi-heart-pulse text-white opacity-25" style="font-size: 10rem; position: absolute; right: -20px; bottom: -20px;"></i>
-                            <div class="p-4 z-1 text-center">
-                                <h4 class="fw-bold text-white mb-2">Rapid Medical Response</h4>
-                                <p class="mb-0 text-white-50">24/7 Ambulance Dispatch via Ospital ng Makati</p>
-                            </div>
+            <div id="emergencyCarousel" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel" style="max-width: 900px; margin: 0 auto;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#emergencyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#emergencyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#emergencyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="ambulance.jpg" class="d-block w-100" alt="Ambulance for rapid medical response" style="height: 450px; object-fit: cover; filter: brightness(0.6);">
+                        <div class="carousel-caption d-none d-md-block pb-5">
+                            <h3 class="fw-bold h2 text-warning"><i class="bi bi-heart-pulse me-2"></i>Rapid Medical Response</h3>
+                            <p class="fs-5">24/7 Ambulance Dispatch via Ospital ng Makati</p>
                         </div>
                     </div>
-                    <div class="css-slider-slide">
-                        <div style="background: linear-gradient(135deg, #b8860b, var(--color-gold)); height: 100%; display: flex; align-items: center; justify-content: center; color: white; border-radius: 12px; position: relative; overflow: hidden;">
-                            <i class="bi bi-fire text-white opacity-25" style="font-size: 10rem; position: absolute; right: -20px; bottom: -20px;"></i>
-                            <div class="p-4 z-1 text-center">
-                                <h4 class="fw-bold text-white mb-2">Fire Suppression</h4>
-                                <p class="mb-0 text-white-50">Makati Bureau of Fire Protection Units</p>
-                            </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="firefighting.jpg" class="d-block w-100" alt="Firefighters in action" style="height: 450px; object-fit: cover; filter: brightness(0.6);">
+                        <div class="carousel-caption d-none d-md-block pb-5">
+                            <h3 class="fw-bold h2 text-warning"><i class="bi bi-fire me-2"></i>Fire Suppression</h3>
+                            <p class="fs-5">Makati Bureau of Fire Protection Units</p>
                         </div>
                     </div>
-                    <div class="css-slider-slide">
-                        <div style="background: linear-gradient(135deg, #059669, #10b981); height: 100%; display: flex; align-items: center; justify-content: center; color: white; border-radius: 12px; position: relative; overflow: hidden;">
-                            <i class="bi bi-shield-check text-white opacity-25" style="font-size: 10rem; position: absolute; right: -20px; bottom: -20px;"></i>
-                            <div class="p-4 z-1 text-center">
-                                <h4 class="fw-bold text-white mb-2">Disaster Relief</h4>
-                                <p class="mb-0 text-white-50">Coordinated Evacuation Operations</p>
-                            </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="disaster-relief.jpg" class="d-block w-100" alt="Community disaster relief" style="height: 450px; object-fit: cover; filter: brightness(0.6);">
+                        <div class="carousel-caption d-none d-md-block pb-5">
+                            <h3 class="fw-bold h2 text-warning"><i class="bi bi-shield-check me-2"></i>Disaster Relief</h3>
+                            <p class="fs-5">Coordinated Evacuation &amp; Relief Operations</p>
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#emergencyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#emergencyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <section class="intro-section">
+    <section class="py-5">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <h1 class="section-title mb-3">Welcome to LIFELINE Makati</h1>
-                    <div class="hero-accent mb-4" aria-hidden="true" style="margin: 0 0 1.5rem 0;"></div>
-                    <p class="lead-text">
-                        LIFELINE Makati is a community-based emergency services hub designed to
-                        connect residents with critical resources during disasters, medical emergencies,
-                        and crisis situations. We serve as a centralized directory for verified hotlines,
-                        trained volunteer responders, and safety information.
+                    <h2 class="fw-bold font-playfair mb-3">Welcome to LIFELINE Makati</h2>
+                    <div style="width: 60px; height: 4px; background-color: #dc3545; margin-bottom: 20px;"></div>
+                    <p class="lead text-secondary">
+                        LIFELINE Makati is a community-based emergency services hub designed to connect residents with critical resources during disasters, medical emergencies, and crisis situations. 
                     </p>
-                    <p>
-                        Our mission is to ensure that every Makati resident has immediate access to
-                        life-saving information when they need it most. From fire emergencies to
-                        mental health crises, LIFELINE Makati is your one-stop community resource.
+                    <p class="text-secondary">
+                        Our mission is to ensure that every Makati resident has immediate access to life-saving information when they need it most. From fire emergencies to mental health crises, we serve as your centralized directory for verified hotlines, trained volunteer responders, and safety information.
                     </p>
-
-                    <ul class="feature-list mt-3">
-                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Verified emergency hotline numbers</li>
-                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Trained volunteer service providers</li>
-                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Interactive safety guides</li>
-                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>24/7 hazard reporting system</li>
+                    <ul class="list-unstyled mt-4 text-secondary">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Verified emergency hotline numbers</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Dedicated volunteer service providers</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Interactive survival &amp; safety guides</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 24/7 community hazard reporting system</li>
                     </ul>
                 </div>
-
-                <div class="col-lg-5 text-center mt-4 mt-lg-0">
-                    <div class="stats-card">
-                        <h3 class="fw-bold mb-4">Quick Stats</h3>
-                        <div class="row g-3">
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm bg-white rounded-4 p-4">
+                        <h4 class="fw-bold mb-4 text-center text-dark">Quick Stats</h4>
+                        <div class="row g-4 text-center">
                             <div class="col-6">
-                                <div class="stat-item">
-                                    <span class="stat-number">10+</span>
-                                    <span class="stat-label">Hotlines</span>
-                                </div>
+                                <h2 class="text-danger fw-bold mb-0">10+</h2>
+                                <span class="text-muted small text-uppercase fw-semibold">Hotlines</span>
                             </div>
                             <div class="col-6">
-                                <div class="stat-item">
-                                    <span class="stat-number">6</span>
-                                    <span class="stat-label">Providers</span>
-                                </div>
+                                <h2 class="text-primary fw-bold mb-0">6</h2>
+                                <span class="text-muted small text-uppercase fw-semibold">Providers</span>
                             </div>
                             <div class="col-6">
-                                <div class="stat-item">
-                                    <span class="stat-number">24/7</span>
-                                    <span class="stat-label">Availability</span>
-                                </div>
+                                <h2 class="text-success fw-bold mb-0">24/7</h2>
+                                <span class="text-muted small text-uppercase fw-semibold">Availability</span>
                             </div>
                             <div class="col-6">
-                                <div class="stat-item">
-                                    <span class="stat-number">10</span>
-                                    <span class="stat-label">Evac Sites</span>
-                                </div>
+                                <h2 class="text-warning fw-bold mb-0">10</h2>
+                                <span class="text-muted small text-uppercase fw-semibold">Evac Sites</span>
                             </div>
                         </div>
                     </div>
@@ -165,264 +155,95 @@
         </div>
     </section>
 
-    <section class="featured-section">
+    <section class="py-5 bg-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title">Featured Services</h2>
-                <p class="section-subtitle">Explore the critical emergency resources available to you.</p>
+                <h2 class="fw-bold font-playfair">Featured Services</h2>
+                <p class="text-muted">Explore the critical emergency resources available to you.</p>
             </div>
-
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon-wrap icon-fire-bg">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
+                        <div class="bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
                             <i class="bi bi-telephone-fill"></i>
                         </div>
-                        <h4 class="fw-bold mt-3">Emergency Hotlines</h4>
-                        <p>
-                            Access a complete directory of verified emergency contact numbers
-                            for fire, police, medical, disaster, and crisis services.
-                        </p>
-                        <ol class="top-contacts">
-                            <li>Bureau of Fire Protection</li>
-                            <li>Philippine National Police</li>
-                            <li>Makati Rescue (EMS)</li>
-                        </ol>
-                        <a href="services.html" class="btn btn-outline-primary mt-auto">View Directory</a>
+                        <h5 class="fw-bold">Emergency Hotlines</h5>
+                        <p class="text-muted small mb-4">Access a complete directory of verified contact numbers for fire, police, and medical services.</p>
+                        <a href="services.html" class="btn btn-outline-danger mt-auto rounded-pill w-100">View Directory</a>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon-wrap icon-medical-bg">
-                            <i class="bi bi-fire text-danger"></i>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
+                        <div class="bg-warning text-dark rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                            <i class="bi bi-fire"></i>
                         </div>
-                        <h4 class="fw-bold mt-3">Fire Safety Guide</h4>
-                        <p>
-                            Learn how to properly operate a fire extinguisher using the P.A.S.S. protocol with our interactive visual map.
-                        </p>
-                        <ul class="kit-items">
-                            <li>Pull the safety pin</li>
-                            <li>Aim at the fire's base</li>
-                            <li>Squeeze &amp; Sweep</li>
-                        </ul>
-                        <a href="services.html#first-aid-map" class="btn btn-outline-danger mt-auto">Explore Guide</a>
+                        <h5 class="fw-bold">Fire Safety Guide</h5>
+                        <p class="text-muted small mb-4">Learn how to properly operate a fire extinguisher using the P.A.S.S. protocol with our interactive visual map.</p>
+                        <a href="services.html#first-aid-map" class="btn btn-outline-warning mt-auto rounded-pill w-100">Explore Guide</a>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card h-100">
-                        <div class="feature-icon-wrap icon-police-bg">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
                             <i class="bi bi-people-fill"></i>
                         </div>
-                        <h4 class="fw-bold mt-3">Volunteer Network</h4>
-                        <p>
-                            Meet the dedicated service providers who volunteer their time
-                            and expertise to keep our community safe and prepared.
-                        </p>
-                        <ul class="kit-items">
-                            <li>Paramedics &amp; EMTs</li>
-                            <li>Firefighters</li>
-                            <li>Social Workers</li>
-                        </ul>
-                        <a href="providers.html" class="btn btn-outline-info mt-auto">Meet Providers</a>
+                        <h5 class="fw-bold">Volunteer Network</h5>
+                        <p class="text-muted small mb-4">Meet the dedicated service providers who volunteer their time and expertise to keep our community safe.</p>
+                        <a href="providers.html" class="btn btn-outline-primary mt-auto rounded-pill w-100">Meet Providers</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="evacuation" class="section section--alt">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section__heading">Designated Evacuation Centers</h2>
-                <p class="section__subheading">Know your nearest evacuation site. Proceed calmly and follow DRRMO instructions.</p>
-            </div>
-
-            <div class="evacuation__panel">
-                <div class="css-tabs">
-                    <input type="radio" name="evac-tabs" id="tab-primary" class="d-none" checked>
-                    <input type="radio" name="evac-tabs" id="tab-secondary" class="d-none">
-
-                    <div class="d-flex" style="border-bottom: 1px solid var(--color-border);">
-                        <label for="tab-primary" class="flex-fill text-center p-3 css-tab-label" style="cursor:pointer; font-weight:600; margin-bottom:0; color: var(--color-muted); transition: all 0.2s;"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Primary Sites</label>
-                        <label for="tab-secondary" class="flex-fill text-center p-3 css-tab-label" style="cursor:pointer; font-weight:600; margin-bottom:0; color: var(--color-muted); transition: all 0.2s;"><i class="bi bi-geo-alt me-1" style="color: var(--color-gold);"></i> Secondary Sites</label>
-                    </div>
-
-                    <div class="p-4 css-tab-content" id="content-primary">
-                        <div class="d-flex flex-column gap-3">
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">1</span>
-                                <div>
-                                    <p class="evacuation__site-name">Hen. Pio Del Pilar Elementary School</p>
-                                    <p class="evacuation__site-location">Brgy. Pio del Pilar, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">2</span>
-                                <div>
-                                    <p class="evacuation__site-name">Makati High School</p>
-                                    <p class="evacuation__site-location">Brgy. Poblacion, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">3</span>
-                                <div>
-                                    <p class="evacuation__site-name">Makati Youth Center</p>
-                                    <p class="evacuation__site-location">Brgy. Guadalupe Nuevo, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">4</span>
-                                <div>
-                                    <p class="evacuation__site-name">Palanan Sports Complex</p>
-                                    <p class="evacuation__site-location">Brgy. Palanan, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">5</span>
-                                <div>
-                                    <p class="evacuation__site-name">Bangkal Covered Court</p>
-                                    <p class="evacuation__site-location">Brgy. Bangkal, Makati City</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="p-4 css-tab-content" id="content-secondary">
-                        <div class="d-flex flex-column gap-3">
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">6</span>
-                                <div>
-                                    <p class="evacuation__site-name">Barangay Poblacion Covered Court</p>
-                                    <p class="evacuation__site-location">Brgy. Poblacion, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">7</span>
-                                <div>
-                                    <p class="evacuation__site-name">Tejeros Multi-Purpose Hall</p>
-                                    <p class="evacuation__site-location">Brgy. Tejeros, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">8</span>
-                                <div>
-                                    <p class="evacuation__site-name">San Antonio Village Covered Court</p>
-                                    <p class="evacuation__site-location">Brgy. San Antonio, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">9</span>
-                                <div>
-                                    <p class="evacuation__site-name">La Paz Covered Court</p>
-                                    <p class="evacuation__site-location">Brgy. La Paz, Makati City</p>
-                                </div>
-                            </div>
-                            <div class="evacuation__site">
-                                <span class="evacuation__site-number">10</span>
-                                <div>
-                                    <p class="evacuation__site-name">Guadalupe Nuevo Covered Court</p>
-                                    <p class="evacuation__site-location">Brgy. Guadalupe Nuevo, Makati City</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-5">
-                <div class="text-center mb-4">
-                    <h3 class="section__heading" style="font-size: 1.35rem;">What to Bring: Survival Kit</h3>
-                    <p class="section__subheading">Pack these essentials before heading to an evacuation center.</p>
-                </div>
-                <div class="kit-grid">
-                    <div class="kit-card">
-                        <div class="kit-card__icon"><i class="bi bi-person-badge"></i></div>
-                        <p class="kit-card__label">Valid ID</p>
-                        <p class="kit-card__description">Government-issued ID for registration at shelters</p>
-                    </div>
-                    <div class="kit-card">
-                        <div class="kit-card__icon"><i class="bi bi-droplet-half"></i></div>
-                        <p class="kit-card__label">Water &amp; Food</p>
-                        <p class="kit-card__description">At least 3 days' supply of drinking water and non-perishable food</p>
-                    </div>
-                    <div class="kit-card">
-                        <div class="kit-card__icon"><i class="bi bi-plus-circle"></i></div>
-                        <p class="kit-card__label">First Aid</p>
-                        <p class="kit-card__description">Basic first aid kit with bandages, antiseptic, and pain relievers</p>
-                    </div>
-                    <div class="kit-card">
-                        <div class="kit-card__icon"><i class="bi bi-file-earmark-text"></i></div>
-                        <p class="kit-card__label">Documents</p>
-                        <p class="kit-card__description">Copies of birth certificates, insurance, and property titles</p>
-                    </div>
-                    <div class="kit-card">
-                        <div class="kit-card__icon"><i class="bi bi-capsule"></i></div>
-                        <p class="kit-card__label">Medications</p>
-                        <p class="kit-card__description">Prescription medicines and vitamins for at least one week</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container text-center">
-            <h2 class="cta-section__title">See a Hazard? Report It Now.</h2>
-            <p class="cta-section__text" style="max-width: 600px; margin-left: auto; margin-right: auto;">
-                Help keep Makati safe. Use our hazard reporting form to alert the local
-                DRRMO about dangers in your area, from flooding to structural damage.
-            </p>
-            <a href="contact.html" class="btn btn-warning btn-lg px-5 shadow-btn">
-                <i class="bi bi-exclamation-triangle-fill me-2"></i>Report a Hazard
+    <section class="py-5 bg-warning text-dark text-center">
+        <div class="container py-4">
+            <h2 class="fw-bold font-playfair mb-3">See a Hazard? Report It Now.</h2>
+            <p class="lead mb-4 mx-auto" style="max-width: 600px;">Help keep Makati safe. Use our hazard reporting form to alert the local DRRMO about dangers in your area, from flooding to structural damage.</p>
+            <a href="contact.html" class="btn btn-dark btn-lg px-5 rounded-pill shadow">
+                <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Report a Hazard
             </a>
         </div>
     </section>
 
-    <footer class="custom-footer">
+    <footer class="bg-dark text-white pt-5 pb-3 font-inter">
         <div class="container">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5><i class="bi bi-map me-2"></i>Site Map</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="services.html" class="footer-link">Services Directory</a></li>
-                        <li><a href="providers.html" class="footer-link">Service Providers</a></li>
-                        <li><a href="about.html" class="footer-link">About &amp; FAQs</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact &amp; Inquiry</a></li>
+                    <h5 class="text-warning mb-3"><i class="bi bi-map me-2"></i>Site Map</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-white">Home</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none hover-white">Services Directory</a></li>
+                        <li class="mb-2"><a href="providers.html" class="text-white-50 text-decoration-none hover-white">Service Providers</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none hover-white">About &amp; FAQs</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-white">Contact &amp; Inquiry</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="services.html#hotlines" class="footer-link">Emergency Hotlines</a></li>
-                        <li><a href="services.html#first-aid-map" class="footer-link">Fire Safety Guide</a></li>
-                        <li><a href="services.html#evacuation" class="footer-link">Evacuation Centers</a></li>
-                        <li><a href="about.html#faqs" class="footer-link">FAQs</a></li>
-                        <li><a href="contact.html" class="footer-link">Report a Hazard</a></li>
+                    <h5 class="text-warning mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html#hotlines" class="text-white-50 text-decoration-none hover-white">Emergency Hotlines</a></li>
+                        <li class="mb-2"><a href="services.html#first-aid-map" class="text-white-50 text-decoration-none hover-white">Fire Safety Guide</a></li>
+                        <li class="mb-2"><a href="services.html#evacuation" class="text-white-50 text-decoration-none hover-white">Evacuation Centers</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-white">Report a Hazard</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 text-md-end">
-                    <h5><i class="bi bi-mortarboard me-2"></i>Academic Project</h5>
-                    <p class="mb-1"><strong>Not for Commercial Use</strong></p>
-                    <p class="mb-1">Developer: John Michael Elaurza</p>
-                    <p class="mb-1">ITS121L - Web Systems and Technologies 1 Laboratory</p>
-                    <p class="mb-1">Section: BSCS BM14</p>
-                    <p class="mb-0">School Year: 2025&ndash;2026</p>
+                <div class="col-md-4 border-start border-secondary ps-md-4">
+                    <h5 class="text-warning mb-3"><i class="bi bi-mortarboard me-2"></i>Academic Project</h5>
+                    <p class="mb-1 text-white-50 fw-semibold text-uppercase" style="font-size: 0.85rem;">Not for Commercial Use</p>
+                    <p class="mb-1 text-white-50 small">Developer: John Michael Elaurza</p>
+                    <p class="mb-1 text-white-50 small">ITS121L - Web Systems and Technologies 1 Laboratory</p>
+                    <p class="mb-1 text-white-50 small">Section: AM6</p>
+                    <p class="mb-0 text-white-50 small">School Year: 2025&ndash;2026</p>
                 </div>
             </div>
-
-            <hr class="footer-divider">
-            <div class="text-center">
-                <small class="footer-copyright d-block mb-1">
-                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.
-                </small>
-                <small class="footer-copyright" style="color: rgba(255, 255, 255, 0.35); font-size: 0.7rem;">
-                    <strong>Disclaimer:</strong> This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes. Not intended for commercial use.
-                </small>
+            <hr class="border-secondary">
+            <div class="text-center pt-2">
+                <p class="text-white-50 small mb-1">&copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.</p>
+                <p class="text-white-50 small" style="opacity: 0.5; font-size: 0.7rem;">Disclaimer: This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes.</p>
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
