@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm" style="background-color: #0f2027;">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-shield-plus text-danger me-2"></i>LIFELINE MAKATI
+                <i class="bi bi-shield-plus me-2"></i>LIFELINE MAKATI
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +205,45 @@
         </div>
     </section>
 
-    <footer class="text-white pt-5 pb-3 font-inter" style="background-color: #0f2027;">
+    <footer class="custom-footer">
         <div class="container">
-            <div class="row mb-4">
+            <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5 class="text-warning mb-3"><i class="bi bi-map me-2"></i>Site Map</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-white">Home</a></li>
-                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none hover-white">Services Directory</a></li>
-                        <li class="mb-2"><a href="providers.html" class="text-white-50 text-decoration-none hover-white">Service Providers</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none hover-white">About &amp; FAQs</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-white">Contact &amp; Inquiry</a></li>
+                    <h5><i class="bi bi-map me-2"></i>Site Map</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="services.html" class="footer-link">Services Directory</a></li>
+                        <li><a href="providers.html" class="footer-link">Service Providers</a></li>
+                        <li><a href="about.html" class="footer-link">About &amp; FAQs</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact &amp; Inquiry</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
-                    <h5 class="text-warning mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.html#hotlines" class="text-white-50 text-decoration-none hover-white">Emergency Hotlines</a></li>
-                        <li class="mb-2"><a href="services.html#first-aid-map" class="text-white-50 text-decoration-none hover-white">Fire Safety Guide</a></li>
-                        <li class="mb-2"><a href="services.html#evacuation" class="text-white-50 text-decoration-none hover-white">Evacuation Centers</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-white">Report a Hazard</a></li>
+                    <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="services.html#hotlines" class="footer-link">Emergency Hotlines</a></li>
+                        <li><a href="services.html#fire-safety-map" class="footer-link">Fire Safety Guide</a></li>
+                        <li><a href="services.html#evacuation" class="footer-link">Evacuation Centers</a></li>
+                        <li><a href="contact.html" class="footer-link">Report a Hazard</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 border-start border-secondary ps-md-4">
-                    <h5 class="text-warning mb-3"><i class="bi bi-mortarboard me-2"></i>Academic Project</h5>
-                    <p class="mb-1 text-white-50 fw-semibold text-uppercase" style="font-size: 0.85rem;">Not for Commercial Use</p>
-                    <p class="mb-1 text-white-50 small">Developer: John Michael Elaurza</p>
-                    <p class="mb-1 text-white-50 small">ITS121-1L - Web Systems and Technologies 1 Laboratory</p>
-                    <p class="mb-1 text-white-50 small">Section: BSCS BM14</p>
-                    <p class="mb-0 text-white-50 small">School Year: 2025&ndash;2026</p>
+                <div class="col-md-4 text-md-end">
+                    <h5><i class="bi bi-mortarboard me-2"></i>Academic Project</h5>
+                    <p class="mb-1"><strong>Not for Commercial Use</strong></p>
+                    <p class="mb-1">Developer: John Michael Elaurza</p>
+                    <p class="mb-1">ITS121-1L - Web Systems and Technologies 1 Laboratory</p>
+                    <p class="mb-1">Section: BSCS BM14</p>
+                    <p class="mb-0">School Year: 2025&ndash;2026</p>
                 </div>
             </div>
-            <hr class="border-secondary">
-            <div class="text-center pt-2">
-                <p class="text-white-50 small mb-1">&copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.</p>
-                <p class="text-white-50 small" style="opacity: 0.5; font-size: 0.7rem;">Disclaimer: This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes.</p>
+            <hr class="footer-divider">
+            <div class="text-center">
+                <small class="footer-copyright d-block mb-1">
+                    &copy; 2026 LIFELINE Makati &mdash; A Community Emergency Services Hub. All rights reserved.
+                </small>
+                <small class="footer-copyright" style="color: rgba(255, 255, 255, 0.35); font-size: 0.7rem;">
+                    <strong>Disclaimer:</strong> This is strictly an academic project. All individuals, service providers, and contact details depicted are fictional or used solely for educational purposes. Not intended for commercial use.
+                </small>
             </div>
         </div>
     </footer>
