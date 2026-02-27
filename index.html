@@ -52,7 +52,7 @@
         </div>
     </nav>
 
-    <header class="text-white text-center py-5 shadow-sm" style="background: linear-gradient(rgba(15, 32, 39, 0.85), rgba(44, 83, 100, 0.85)), url('skyline.jpg') center/cover no-repeat;">
+    <header class="text-white text-center py-5 shadow-sm" style="background: linear-gradient(rgba(15, 32, 39, 0.85), rgba(44, 83, 100, 0.85)), url('./skyline.jpg') center/cover no-repeat;">
         <div class="container py-5">
             <span class="badge bg-danger mb-3 px-3 py-2 rounded-pill">Disaster Risk Reduction &amp; Management</span>
             <h1 class="display-4 fw-bold font-playfair mb-3">Your <span class="text-warning">Lifeline</span> in Times of Crisis</h1>
@@ -165,30 +165,58 @@
                 <p class="text-muted">Explore the critical emergency resources available to you.</p>
             </div>
             <div class="row g-4">
+                
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
-                        <img src="emergency-call.jpg" alt="Emergency Hotlines" class="rounded-circle shadow-sm mb-3 mx-auto d-block" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #dc3545;">
-                        <h5 class="fw-bold">Emergency Hotlines</h5>
-                        <p class="text-muted small mb-4">Access a complete directory of verified contact numbers for fire, police, and medical services.</p>
-                        <a href="services.html" class="btn btn-outline-danger mt-auto rounded-pill w-100">View Directory</a>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center hover-lift overflow-hidden" 
+                         style="background: linear-gradient(to bottom, rgba(32, 58, 67, 0.4), rgba(15, 32, 39, 0.95)), url('emergency-call.jpg') center/cover no-repeat; min-height: 380px;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-auto shadow-sm" 
+                                 style="width: 75px; height: 75px; font-size: 2rem; background-color: rgba(220, 53, 69, 0.85); color: white; backdrop-filter: blur(6px); border: 2px solid rgba(255,255,255,0.3);">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fw-bold text-white mb-2">Emergency Hotlines</h5>
+                                <p class="text-white-50 small mb-4">Access a complete directory of verified contact numbers for fire, police, and medical services.</p>
+                                <a href="services.html" class="btn btn-danger mt-auto rounded-pill w-100 fw-bold shadow-sm">View Directory</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
-                        <img src="fire-extinguisher.jpg" alt="Fire Safety Guide" class="rounded-circle shadow-sm mb-3 mx-auto d-block" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #ffc107;">
-                        <h5 class="fw-bold">Fire Safety Guide</h5>
-                        <p class="text-muted small mb-4">Learn how to properly operate a fire extinguisher using the P.A.S.S. protocol with our interactive visual map.</p>
-                        <a href="services.html#first-aid-map" class="btn btn-outline-warning mt-auto rounded-pill w-100">Explore Guide</a>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center hover-lift overflow-hidden" 
+                         style="background: linear-gradient(to bottom, rgba(32, 58, 67, 0.4), rgba(15, 32, 39, 0.95)), url('fire-extinguisher.jpg') center/cover no-repeat; min-height: 380px;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-auto shadow-sm" 
+                                 style="width: 75px; height: 75px; font-size: 2rem; background-color: rgba(255, 193, 7, 0.85); color: #000; backdrop-filter: blur(6px); border: 2px solid rgba(255,255,255,0.3);">
+                                <i class="bi bi-fire"></i>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fw-bold text-white mb-2">Fire Safety Guide</h5>
+                                <p class="text-white-50 small mb-4">Learn how to properly operate a fire extinguisher using the P.A.S.S. protocol with our interactive visual map.</p>
+                                <a href="services.html#first-aid-map" class="btn btn-warning mt-auto rounded-pill w-100 fw-bold shadow-sm" style="color: #000 !important;">Explore Guide</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift">
-                        <img src="volunteer-network.png" alt="Volunteer Network" class="rounded-circle shadow-sm mb-3 mx-auto d-block" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #0d6efd;">
-                        <h5 class="fw-bold">Volunteer Network</h5>
-                        <p class="text-muted small mb-4">Meet the dedicated service providers who volunteer their time and expertise to keep our community safe.</p>
-                        <a href="providers.html" class="btn btn-outline-primary mt-auto rounded-pill w-100">Meet Providers</a>
+                    <div class="card h-100 border-0 shadow-sm rounded-4 text-center hover-lift overflow-hidden" 
+                         style="background: linear-gradient(to bottom, rgba(32, 58, 67, 0.4), rgba(15, 32, 39, 0.95)), url('volunteer-network.png') center/cover no-repeat; min-height: 380px;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-auto shadow-sm" 
+                                 style="width: 75px; height: 75px; font-size: 2rem; background-color: rgba(13, 110, 253, 0.85); color: white; backdrop-filter: blur(6px); border: 2px solid rgba(255,255,255,0.3);">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fw-bold text-white mb-2">Volunteer Network</h5>
+                                <p class="text-white-50 small mb-4">Meet the dedicated service providers who volunteer their time and expertise to keep our community safe.</p>
+                                <a href="providers.html" class="btn btn-primary mt-auto rounded-pill w-100 fw-bold shadow-sm">Meet Providers</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -249,5 +277,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
